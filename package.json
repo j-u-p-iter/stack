@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "@j.u.p.iter/jupiter-scripts": "^1.14.1"
+  },
+  "dependencies": {
+    "@j.u.p.iter/singly-linked-list": "^0.0.0-semantically-released"
   }
 }
