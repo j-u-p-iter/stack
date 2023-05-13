@@ -9,9 +9,10 @@ import { SinglyLinkedList } from '@j.u.p.iter/singly-linked-list';
  *     to the list - the first element.
  *
  *   We don't add element to the end of the list but to the beginning
- *     since it's more performant operation for the SinglyLinkedList. Adding to the end
+ *     since it's more performant operation for the SinglyLinkedList. Removing from the end
  *     we have to iterate through the whole list, starting from the head.
- *     We don't need to do this iteration, adding element to the beginning.
+ *
+ *   We don't need to do this iteration, removing or adding element from/to the beginning of the list.
  *
  */
 
