@@ -1,14 +1,14 @@
-import { SinglyLinkedList } from '@j.u.p.iter/singly-linked-list';
+import { SinglyLinkedList } from "@j.u.p.iter/singly-linked-list";
 
 /**
- * The Stack is implementation is based on SinglyLinkedList.
- *   Adding to the top of the stack, we are actually adding the 
+ * The Stack implementation is based on SinglyLinkedList.
+ *   Adding to the top of the stack, we are actually adding the
  *     element to the beginning of the list.
  *
  *   Removing from the stack, we are removing the last added element
  *     to the list - the first element.
  *
- *   We don't add element to the end of the list but to the beginning
+ *   We don't remove element from the end of the list instead
  *     since it's more performant operation for the SinglyLinkedList. Removing from the end
  *     we have to iterate through the whole list, starting from the head.
  *
@@ -17,18 +17,20 @@ import { SinglyLinkedList } from '@j.u.p.iter/singly-linked-list';
  */
 
 export class Stack {
-  constructor(private singlyLinkedList: SinglyLinkedList = new SinglyLinkedList()) {};
+  constructor(
+    private singlyLinkedList: SinglyLinkedList = new SinglyLinkedList()
+  ) {}
 
   /**
    * Clears the stack
    *
    */
   public clear() {
-    this.singlyLinkedList.clear(); 
+    this.singlyLinkedList.clear();
   }
 
   /**
-   * Returns the number of elements 
+   * Returns the number of elements
    *   in the stack
    *
    */
@@ -36,12 +38,16 @@ export class Stack {
     return this.singlyLinkedList.getLength();
   }
 
+  /**
+   * Checks if the stack is empty.
+   *
+   */
   public isEmpty() {
     return this.singlyLinkedList.isEmpty();
   }
 
   /**
-   * Returns element from the top of 
+   * Returns element from the top of
    *   the stack.
    *
    */
@@ -54,18 +60,18 @@ export class Stack {
   }
 
   /**
-   * Adds element to the top 
+   * Adds element to the top
    *   of the stack
    *
    */
-  public push(value) {
-    this.singlyLinkedList.unshift(value);
+  public push(element) {
+    this.singlyLinkedList.unshift(element);
 
     return this;
   }
 
   /**
-   * Removes and returns element from the top of the stack Removes and returns element 
+   * Removes and returns element from the top of the stack Removes and returns element
    *   from the top of the stack.
    *
    */
@@ -86,4 +92,4 @@ export class Stack {
 
     return new Stack(singlyLinkedList);
   }
-};
+}
